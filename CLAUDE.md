@@ -31,7 +31,7 @@ Load it for one session with `claude --plugin-dir ~/projects/harnify`. Check it 
 
 ## Why it's small
 
-vold (`~/projects/Archive/Claude-init`, public as `ibrah5em/vold`) grew to ~1,300 lines of md
+vold (`~/projects/Archive/Projects/Claude-init`, public as `ibrah5em/vold`) grew to ~1,300 lines of md
 plus ~1,400 lines of hooks and scripts installed into every project. Each piece of code forced
 the next one: installed hooks needed hash-tracked upgrades, a generated `state.md` needed a
 generator and a checker, outside skills needed a quarantine agent. None of it improved what the
@@ -75,7 +75,7 @@ works, archive vold with a pointer here.
   for the list because models overwrite md lists more. harnify's answer is the plan.md editing
   rules in the AGENTS.md template.
 - Closest tools (super-bootstrap, agent-project-bootstrap) grew hooks the way vold did. vold's
-  survey: `~/projects/Archive/Claude-init/docs/agent/notes/landscape.md`.
+  survey: `~/projects/Archive/Projects/Claude-init/docs/agent/notes/landscape.md`.
 
 ## Open
 
