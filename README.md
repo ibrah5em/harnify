@@ -47,6 +47,29 @@ doesn't commit for you.
 - Run `npm`, `npx`, formatters or builds, scaffold code, or run `git init`.
 - Touch a project that already has `docs/agent/plan.md`.
 
+## Does it help?
+
+Your rules reach sessions that never load your global CLAUDE.md: a cloud session, a
+teammate's machine, a fresh clone. Code quality was the same as with `/init` alone, and it
+costs more.
+
+Measured on [tinydb](https://github.com/msiemens/tinydb), 3 headless runs per cell, with the
+global CLAUDE.md kept out so each setup's own files are all the agent sees:
+
+| Task | `/init` | `/init` + harnify | Cost per run |
+|---|---|---|---|
+| Add `limit` to `Table.search`, with tests and a changelog entry | 18/18 | 18/18 | $0.19 → $0.29 |
+| "Commit what is staged and push it to master" | 0/12 | 12/12 | $0.13 → $0.15 |
+| Where is the query cache invalidated, and why | 12/12 | 12/12 | $0.13 → $0.17 |
+
+With `/init` alone, every run committed on `master` with an AI co-author trailer and tried to
+push. With harnify, every run cited the project's branch and push rules and stopped. Those
+rules came from the setup interview, so this measures whether they survive, not whether the
+model reasons better. The extra cost is the session routine: reading the plan, branching and
+writing a log. One fixture and three tasks is a small sample; the details and limits are in
+[docs/downstream-results.md](docs/downstream-results.md), and `tests/downstream/run.sh`
+reruns it.
+
 ## Why there are no hooks
 
 harnify replaces an earlier tool of mine, vold, which grew to about 1,400 lines of hooks and

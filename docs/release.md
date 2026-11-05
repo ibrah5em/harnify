@@ -24,9 +24,10 @@ ablation doesn't measure harnify. See `docs/testing.md`.
 
 - [ ] Setup checks per `docs/testing.md`, new and existing mode, 3 runs each, all checks pass
 - [x] Should-not-fire case `evals/02-no-setup-unasked` (pilot: 1.0)
-- [ ] Downstream: one fixture project, set up once by harnify and once by `/init`, seeded by
-      `scaffold_script`. The same tasks run on both copies, graded on outcomes. The headline is
-      the score gap. Done when the table is in the README, whatever the numbers come out as
+- [x] Downstream: tinydb set up by `/init` and by `/init` + harnify, run headless by
+      `tests/downstream/run.sh` (plugin eval loads no project CLAUDE.md). Results in
+      `docs/downstream-results.md`
+- [ ] Results table in the README
 
 ## 3. Release
 
@@ -36,3 +37,10 @@ ablation doesn't measure harnify. See `docs/testing.md`.
 - [ ] Launch post with the recording and the eval table: Show HN, r/ClaudeAI, X, Arabic dev
       communities (the RTL skill)
 - [ ] Archive vold with a pointer here
+
+## Status 2026-11-05
+
+- Downstream comparison done: `docs/downstream-results.md`. The rules task is 0/12 with `/init`
+  alone and 12/12 with harnify. Quality is equal on the coding task and the code question, and
+  harnify costs 35% more overall.
+- Next: decide how the README states it, then the icon, the recording, and Phase 3.

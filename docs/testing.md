@@ -33,13 +33,16 @@ Pass when all hold:
 
 ## `plugin eval`
 
-`evals/` holds what `plugin eval` can grade. Run it with:
+`evals/` holds only what `plugin eval` can grade: the should-not-fire case.
 
 ```sh
-claude plugin eval . --scaffold --ablation none --no-publish --allow-tools Bash Write Edit \
-  --disallow-tools AskUserQuestion --max-cost-usd 5
+claude plugin eval . --ablation none --no-publish --allow-tools Bash Write Edit \
+  --disallow-tools AskUserQuestion --max-cost-usd 2
 ```
 
-`--ablation with-without` isn't useful here: it toggles loading the plugin during the task,
-but harnify's effect is in the files it wrote before. Downstream cases compare two seeded
-copies of the same project instead (`scaffold_script`, which runs as you).
+## Downstream comparison
+
+`bash tests/downstream/run.sh [runs] [task glob]` seeds tinydb with each setup, runs every task
+headless with `--setting-sources project,local`, and prints pass rates per check. It doesn't
+use `plugin eval`, because eval sessions load no project CLAUDE.md or AGENTS.md (checked
+2026-11-05). Results so far: `docs/downstream-results.md`.
