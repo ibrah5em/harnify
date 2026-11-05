@@ -80,9 +80,9 @@ From `templates.md`:
   Conventions, and add `@AGENTS.md` as the CLAUDE.md's first line. If `AGENTS.md` exists,
   add the sections it's missing.
 - `.claude/CLAUDE.md` (new mode only; an existing root CLAUDE.md already does its job).
-- `.claude/rules/working-style.md`: copy `${CLAUDE_PLUGIN_ROOT}/library/rules/working-style.md`
-  unchanged. Every project gets it, because cloud sessions and other contributors never load
-  the global file.
+- `.claude/rules/working-style.md`, if the person said yes or the interview skipped the
+  question: copy `${CLAUDE_PLUGIN_ROOT}/library/rules/working-style.md` unchanged. It lives in
+  the project because cloud sessions and other contributors never load the global file.
 - `.claude/rules/<area>.md` for area knowledge the interview turned up, each with `paths:`.
 - `.claude/agents/<name>.md` for the agents the person picked.
 - `.claude/settings.json`: merge with `jq` into whatever is there, never overwrite. Add keys

@@ -25,6 +25,9 @@ the code or the global instructions already answer. Don't pad to reach 8.
   the global instructions: "a push to `main` deploys", "never read `.env`", "`dist/` is
   generated". Each pick becomes a `permissions.deny` rule where one can express it
   (`toolbox.md`), and a line in Conventions where it can't.
+- Whether to add the library's working style (ask instead of guessing, push back, plain voice)
+  as `.claude/rules/working-style.md`. Recommend yes. Skip the question if the global
+  instructions already say the same things.
 
 Plugins and MCP servers are not asked here. They're one separate question in `toolbox.md`,
 after discovery, so the options are real candidates.
