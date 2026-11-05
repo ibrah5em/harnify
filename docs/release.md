@@ -36,12 +36,12 @@ ablation doesn't measure harnify. See `docs/testing.md`.
 
 ## 3. Release
 
-- [ ] Public `ibrah5em/harnify`, push (done 2026-11-05). `claude plugin tag`
+- [x] Public `ibrah5em/harnify`, push, `claude plugin tag` (harnify--v0.1.0, 2026-11-05)
 - [ ] `validate --profile directory` clean, submit to the plugin directory
-- [ ] Listings: awesome-claude-code, claudepluginhub, skills.sh
-- [ ] Launch post with the recording and the eval table: Show HN, r/ClaudeAI, X, Arabic dev
+- [ ] Listings: claudepluginhub, awesome-claude-code from 2026-11-14 (14-day rule). Drafts in `docs/launch.md`
+- [ ] Launch post with the eval table, recording optional (decided 2026-11-05): Show HN, r/ClaudeAI, X, Arabic dev
       communities (the RTL skill)
-- [ ] Archive vold with a pointer here
+- [x] Archive vold with a pointer here (public, archived 2026-11-05)
 
 ## Status 2026-11-05
 

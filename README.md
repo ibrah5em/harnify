@@ -72,7 +72,7 @@ reruns it.
 
 ## Why there are no hooks
 
-harnify replaces an earlier tool of mine, vold, which grew to about 1,400 lines of hooks and
+harnify replaces an earlier tool of mine, [vold](https://github.com/ibrah5em/vold), which grew to about 1,400 lines of hooks and
 scripts installed into every project. Each piece of code needed another one to keep it working:
 upgrade tracking, a state generator, a checker. None of it changed what the setup picked for
 a project. Those picks come from the model's judgment, and the markdown is where that judgment

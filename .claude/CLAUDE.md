@@ -31,7 +31,7 @@ Load it for one session with `claude --plugin-dir ~/projects/harnify`. Check it 
 
 ## Why it's small
 
-vold (`~/projects/Archive/Projects/Claude-init`, public as `ibrah5em/vold`) grew to ~1,300 lines of md
+vold (`~/projects/Archive/Projects/Claude-init`, public and archived as `ibrah5em/vold`) grew to ~1,300 lines of md
 plus ~1,400 lines of hooks and scripts installed into every project. Each piece of code forced
 the next one: installed hooks needed hash-tracked upgrades, a generated `state.md` needed a
 generator and a checker, outside skills needed a quarantine agent. None of it improved what the
