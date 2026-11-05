@@ -1,0 +1,16 @@
+{
+  "name": "harnify",
+  "owner": {
+    "name": "Ibrahem Hasaki",
+    "url": "https://ibrah5em.me"
+  },
+  "description": "harnify: set up a project's .claude/ from an idea",
+  "plugins": [
+    {
+      "name": "harnify",
+      "source": "./",
+      "description": "Set up a project's .claude/ from an idea: AGENTS.md, picked skills, agents and rules, and docs/agent/ that sessions keep current",
+      "version": "0.1.0"
+    }
+  ]
+}

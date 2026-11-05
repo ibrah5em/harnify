@@ -57,8 +57,11 @@ works, archive vold with a pointer here.
 - Public skills are never fetched or read during init, only suggested. Plugins and MCP servers
   are one optional question after discovery.
 - No upgrade mode: a project with `docs/agent/plan.md` is left alone.
-- `working-style.md` goes into every project, since cloud sessions and other contributors never
-  load the global CLAUDE.md.
+- `working-style.md` is one interview question, recommended yes (2026-11-05). Copying it
+  unasked changed how Claude talks to strangers. It lives in the project because cloud
+  sessions and other contributors never load the global CLAUDE.md.
+- Release order (2026-11-05): installable, then evals with a with/without baseline, then a
+  public repo and launch. Plan in `docs/release.md`.
 - Name: harnify. Rejected: loom (Atlassian's product), agentify (two projects in this space),
   repoify (reads as "create a repo").
 - Costs of md only, accepted: rules are advice except deny entries; `docs/agent/` can drift
