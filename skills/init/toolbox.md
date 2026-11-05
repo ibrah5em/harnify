@@ -38,7 +38,8 @@ Scope: if `git log --format=%ae | sort -u` shows only the person (or there's no 
 plugins go in at `--scope project`, so cloud sessions get them too. If other people commit,
 add one more question in the same call: project scope (everyone on the repo gets them) or
 local scope (`.claude/settings.local.json`, gitignored, only the person). Recommend local:
-plugin picks are personal unless the team agreed on them. Headless, take local. MCP servers
+plugin picks are personal unless the team agreed on them. Without `AskUserQuestion` (headless), don't
+list it with the other questions: take local and say so in the report. MCP servers
 stay `--scope project` either way: `claude mcp add --scope local` writes to `~/.claude.json`.
 
 ## Install
