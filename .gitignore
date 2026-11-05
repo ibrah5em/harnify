@@ -1,3 +1,4 @@
 evals/results/
 .eval-cache/
 tests/downstream/results/
+tests/setup/results/
