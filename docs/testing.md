@@ -6,6 +6,13 @@
 even with `Write(.claude/**)` granted (checked 2026-11-05 on 2.1.318). Since `.claude/` is what
 harnify writes, setup runs happen headless in a scratch folder instead.
 
+`bash tests/setup/run.sh [runs] [modes]` does all of the below and prints the failing checks per
+run. Read a FAIL before trusting it: on 2026-11-05 every one of them was the grader (the session
+writes docs through heredocs, and its deny list names `git commit`), and one run only hit the
+usage limit. Last result: new 3/3, existing 3/3.
+
+By hand:
+
 ```sh
 d=$(mktemp -d) && cd $d && git init -q -b main
 { jq -S .enabledPlugins ~/.claude/settings.json 2>/dev/null || echo missing; } > ../g-before
