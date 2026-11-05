@@ -10,10 +10,10 @@ the pitch.
 
 - [x] LICENSE, `.claude-plugin/marketplace.json`, CLAUDE.md moved to `.claude/`
 - [x] working-style.md made an interview question
-- [ ] README. Done when `claude plugin validate . --profile directory` reports no README problem
+- [x] README. Done when `claude plugin validate . --profile directory` reports no README problem
 - [ ] `.claude-plugin/icon.png`, square, 512–2048 px. The directory keeps the first icon
       submitted, so this one is final
-- [ ] Re-run existing mode on a fresh draw-to-web clone with the toolbox Scope rule.
+- [x] Re-run existing mode on a fresh draw-to-web clone with the toolbox Scope rule.
       Done when the log shows plugins at the scope the rule picks and global state unchanged
 - [ ] Terminal recording of new mode for the top of the README
 

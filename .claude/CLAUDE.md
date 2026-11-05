@@ -91,5 +91,5 @@ works, archive vold with a pointer here.
   `autoMemoryEnabled: true` value was left and proposed in the report, and the settings diff
   only appends. New in the re-run: it put plugins at `--scope local` on its own, reasoning
   that project scope pushes your picks onto teammates. Now `toolbox.md`, Scope: solo repo →
-  project, no question; others commit → ask, local recommended. Not re-run yet.
+  project, no question; others commit → ask, local recommended. Re-run 2026-11-05 on a fresh clone ($0.42 + $0.65, two `-p` calls because headless stops at the interview): plugins at `--scope local`, global state unchanged, no npm/npx, settings diff append-only, `autoMemoryEnabled` left. It still listed the scope question despite "Headless, take local"; toolbox.md reworded, not re-run.
 - README, LICENSE.
