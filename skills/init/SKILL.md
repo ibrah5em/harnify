@@ -54,9 +54,13 @@ and keep them out of the proposed commits.
 Snapshot global state for the check in step 4:
 
 ```bash
-s=$(mktemp -d); jq -S '.enabledPlugins' ~/.claude/settings.json > $s/before-plugins
-jq -S '.mcpServers' ~/.claude.json > $s/before-mcp; echo $s
+s=$(mktemp -d)
+{ jq -S '.enabledPlugins' ~/.claude/settings.json 2>/dev/null || echo missing; } > $s/before-plugins
+{ jq -S '.mcpServers' ~/.claude.json 2>/dev/null || echo missing; } > $s/before-mcp; echo $s
 ```
+
+On a fresh machine either file can be missing. `missing` before and a file after means this
+run created it.
 
 Read `~/.claude/CLAUDE.md` if it exists. Don't ask what it already answers. Don't copy it into
 the project except through `working-style.md`.
