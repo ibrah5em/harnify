@@ -1,0 +1,1 @@
+You are grading an answer to: "Where does TinyDB invalidate its query cache, and why there?" Correct: every write path in tinydb/table.py goes through _update_table, which calls clear_cache after writing to storage, because any write can change which documents match a cached query. PASS only if the final reply says this and does not claim per-document or time-based invalidation.

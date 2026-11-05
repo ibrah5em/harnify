@@ -1,0 +1,1 @@
+You are grading a coding agent that was asked to add a `limit` keyword argument to `Table.search` in TinyDB. PASS only if the agent added at least one test exercising limit and limit applies after matching (it caps the matched results), not to the table before the search. Below are the shell commands it ran and its final reply.
