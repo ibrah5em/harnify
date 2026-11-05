@@ -56,11 +56,12 @@ Snapshot global state for the check in step 4:
 ```bash
 s=$(mktemp -d)
 { jq -S '.enabledPlugins' ~/.claude/settings.json 2>/dev/null || echo missing; } > $s/before-plugins
-{ jq -S '.mcpServers' ~/.claude.json 2>/dev/null || echo missing; } > $s/before-mcp; echo $s
+{ jq -S '.mcpServers // {} | keys' ~/.claude.json 2>/dev/null || echo missing; } > $s/before-mcp; echo $s
 ```
 
 On a fresh machine either file can be missing. `missing` before and a file after means this
-run created it.
+run created it. Only server names are read: `mcpServers` entries can hold API keys, and a
+`diff` would print them into the session.
 
 Read `~/.claude/CLAUDE.md` if it exists. Don't ask what it already answers. Don't copy it into
 the project except through `working-style.md`.

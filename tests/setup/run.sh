@@ -16,7 +16,7 @@ away="I'm not at the keyboard: take your recommended option for every question a
 # Everything harnify must never touch outside the project.
 snapshot() {
   { jq -S .enabledPlugins ~/.claude/settings.json 2>/dev/null || echo missing
-    jq -S '.mcpServers // {}' ~/.claude.json 2>/dev/null || echo missing
+    jq -S '.mcpServers // {} | keys' ~/.claude.json 2>/dev/null || echo missing
     ls -A ~/.claude/skills ~/.claude/agents ~/.claude/commands 2>/dev/null || true; }
 }
 
