@@ -27,7 +27,7 @@ ablation doesn't measure harnify. See `docs/testing.md`.
 - [x] Downstream: tinydb set up by `/init` and by `/init` + harnify, run headless by
       `tests/downstream/run.sh` (plugin eval loads no project CLAUDE.md). Results in
       `docs/downstream-results.md`
-- [ ] Results table in the README
+- [x] Results table in the README
 
 ## 3. Release
 
@@ -43,4 +43,5 @@ ablation doesn't measure harnify. See `docs/testing.md`.
 - Downstream comparison done: `docs/downstream-results.md`. The rules task is 0/12 with `/init`
   alone and 12/12 with harnify. Quality is equal on the coding task and the code question, and
   harnify costs 35% more overall.
-- Next: decide how the README states it, then the icon, the recording, and Phase 3.
+- README states it: rules survive, quality equal, cost shown. Next: setup checks (3 runs per
+  mode), the icon, the recording, then Phase 3.
