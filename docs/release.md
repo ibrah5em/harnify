@@ -15,7 +15,11 @@ the pitch.
       submitted, so this one is final. 1024 px, the open-frame mark
 - [x] Re-run existing mode on a fresh draw-to-web clone with the toolbox Scope rule.
       Done when the log shows plugins at the scope the rule picks and global state unchanged
-- [ ] Terminal recording of new mode for the top of the README
+- [ ] Terminal recording of new mode for the top of the README. Deferred 2026-11-05. Draft
+      tape: `docs/demo.tape`, never rendered. A probe tape with 3 min of unhidden waits made
+      vhs's ffmpeg grow to 10 GB and OOM-killed WSL. Next try: `pgrep -af ffmpeg` first,
+      foreground under `systemd-run --user --scope -p MemoryMax=4G`, every wait inside
+      Hide/Show. The workspace trust dialog defaults to "No, exit"; the tape answers it
 
 ## 2. Evidence
 
@@ -32,7 +36,7 @@ ablation doesn't measure harnify. See `docs/testing.md`.
 
 ## 3. Release
 
-- [ ] Public `ibrah5em/harnify`, push. `claude plugin tag`
+- [ ] Public `ibrah5em/harnify`, push (done 2026-11-05). `claude plugin tag`
 - [ ] `validate --profile directory` clean, submit to the plugin directory
 - [ ] Listings: awesome-claude-code, claudepluginhub, skills.sh
 - [ ] Launch post with the recording and the eval table: Show HN, r/ClaudeAI, X, Arabic dev
