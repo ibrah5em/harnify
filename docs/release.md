@@ -19,11 +19,14 @@ the pitch.
 
 ## 2. Evidence
 
-- [ ] `evals/` setup cases (new and existing mode). Graders: AGENTS.md + .claude/CLAUDE.md
-      ≤ 60 lines, nothing under `~/.claude`, deny entries present, every plan item has *Done when*
-- [ ] Downstream cases: the same task after harnify and after a bare `/init`, run with
-      `claude plugin eval --ablation with-without --max-cost-usd <n>`
-- [ ] Results table in the README, whatever the numbers come out as
+`plugin eval` can't grade setup runs (it denies `.claude/` writes), and its with/without
+ablation doesn't measure harnify. See `docs/testing.md`.
+
+- [ ] Setup checks per `docs/testing.md`, new and existing mode, 3 runs each, all checks pass
+- [x] Should-not-fire case `evals/02-no-setup-unasked` (pilot: 1.0)
+- [ ] Downstream: one fixture project, set up once by harnify and once by `/init`, seeded by
+      `scaffold_script`. The same tasks run on both copies, graded on outcomes. The headline is
+      the score gap. Done when the table is in the README, whatever the numbers come out as
 
 ## 3. Release
 
