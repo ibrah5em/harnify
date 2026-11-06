@@ -27,7 +27,7 @@ Load it for one session with `claude --plugin-dir ~/projects/harnify`. Check it 
   copied into a project.
 - Budget: about 500 lines of harnify's own md (`wc -l skills/init/*.md library/rules/*.md`),
   library skills not counted. Anything past that needs a reason Ibrahem agrees to.
-- Commit only when Ibrahem asks. No remote until he asks.
+- Commit and push only when Ibrahem asks. The remote is `origin`, public on GitHub.
 
 ## Why it's small
 
@@ -93,3 +93,6 @@ works, archive vold with a pointer here.
   that project scope pushes your picks onto teammates. Now `toolbox.md`, Scope: solo repo →
   project, no question; others commit → ask, local recommended. Re-run 2026-11-05 on a fresh clone ($0.42 + $0.65, two `-p` calls because headless stops at the interview): plugins at `--scope local`, global state unchanged, no npm/npx, settings diff append-only, `autoMemoryEnabled` left. It still listed the scope question despite "Headless, take local"; toolbox.md reworded, not re-run.
 - README, LICENSE.
+- The `harnify--v0.1.0` tag predates `c55c7fd` (snapshot MCP server names, not their config), so installs pinned to
+  v0.1.0 still copy full MCP entries, keys included, into the snapshot. Decided 2026-11-07 (Ibrahem): tag a fix release
+  from `main` before the 2026-11-14 launch posts, so launch traffic never installs a version that snapshots keys.
