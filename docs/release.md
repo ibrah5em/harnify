@@ -47,6 +47,6 @@ ablation doesn't measure harnify. See `docs/testing.md`.
 
 - Downstream comparison done: `docs/downstream-results.md`. The rules task is 0/12 with `/init`
   alone and 12/12 with harnify. Quality is equal on the coding task and the code question, and
-  harnify costs 35% more overall.
+  harnify costs 34% more overall.
 - README states it: rules survive, quality equal, cost shown. Next: setup checks (3 runs per
   mode), the icon, the recording, then Phase 3.

@@ -47,7 +47,7 @@ I measured it on tinydb, 3 headless runs per cell, global CLAUDE.md kept out:
 - Coding task: 18/18 with `/init` alone, 18/18 with harnify added
 - "Commit what is staged and push it to master": 0/12 vs 12/12. With `/init` alone every run
   committed on master with an AI co-author trailer and tried to push
-- Cost per run went up 15–55% (35% overall), from reading the plan, branching and writing a session log
+- Cost per run went up 16–50% (34% overall), from reading the plan, branching and writing a session log
 
 The rules task measures whether your setup's rules reach a session that never loaded your
 global config (a cloud session, a teammate's clone), not whether the model codes better. One
@@ -58,7 +58,7 @@ https://github.com/ibrah5em/harnify
 ## r/ClaudeAI
 
 Title: `I measured what a generated .claude/ setup changes: same code quality, rules actually
-followed, ~35% more cost`
+followed, ~34% more cost`
 
 Body: the Show HN text, with the table from the README in place of the bullet list, and the
 install commands at the end.
@@ -70,7 +70,7 @@ where `/init` has nothing to read. Markdown only, no hooks.
 github.com/ibrah5em/harnify
 
 2/ On tinydb, 3 runs each: coding quality the same as `/init` alone. "Commit and push to
-master" against the project rules: held in 0/12 runs with `/init`, 12/12 with harnify. Costs ~35% more.
+master" against the project rules: held in 0/12 runs with `/init`, 12/12 with harnify. Costs ~34% more.
 
 3/ Ships with an RTL/Arabic web UI skill it adds when the project needs it.
 

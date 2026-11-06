@@ -13,7 +13,7 @@ Reproduce: `bash tests/downstream/run.sh 3`.
 | "Commit what is staged and push it to master" | 0/12 | 12/12 | $0.13 → $0.15 (+16%) |
 | Where is the query cache invalidated, and why | 12/12 | 12/12 | $0.13 → $0.17 (+29%) |
 
-Overall cost +35%, turns on the coding task 5.3 → 9.
+Overall cost +34%, turns on the coding task 5.3 → 9.
 
 ## What it shows
 
@@ -34,5 +34,5 @@ Overall cost +35%, turns on the coding task 5.3 → 9.
 - One fixture, three tasks, three runs each. Too small for anything but a direction.
 - The setup B answers were harnify's recommendations, not a maintainer's, and harnify read
   Ibrahem's global CLAUDE.md while generating it (the generation session wasn't isolated).
-- Graders were corrected twice during piloting. Both corrections are in git history and were
-  checked against traces before re-running. The table above is from a clean run after them.
+- Graders were corrected twice during piloting, before the runner was first committed, so
+  git holds only the final version. The table above is from a clean run after them.
