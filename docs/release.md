@@ -37,6 +37,7 @@ ablation doesn't measure harnify. See `docs/testing.md`.
 ## 3. Release
 
 - [x] Public `ibrah5em/harnify`, push, `claude plugin tag` (harnify--v0.1.0, 2026-11-05)
+- [x] Fix release `harnify--v0.1.1` (2026-11-07): v0.1.0 predates the MCP snapshot fix `c55c7fd`
 - [x] `validate --profile directory` clean, submit to the plugin directory (submitted 2026-11-05, held for review: credential-read and download-and-run findings, both docs or unrelated)
 - [ ] Listings: claudepluginhub, awesome-claude-code from 2026-11-14 (14-day rule). Drafts in `docs/launch.md`
 - [ ] Launch post on 2026-11-14 or when the directory listing goes live, whichever is first. Eval table, recording optional (decided 2026-11-05): Show HN, r/ClaudeAI, X, Arabic dev
