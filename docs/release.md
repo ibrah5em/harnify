@@ -41,7 +41,10 @@ ablation doesn't measure harnify. See `docs/testing.md`.
 - [x] `validate --profile directory` clean, submit to the plugin directory (submitted 2026-11-05, held for review: credential-read and download-and-run findings, both docs or unrelated)
 - [ ] Directory, take 2: v0.1.1 refused by policy (`LOCAL_CODE_FILE_TYPE`, unverified orgs can't
       ship scripts; the repo root was the plugin, so `tests/*.sh` shipped). Plugin moved to
-      `plugin/` in v0.1.2. Done when the submission's path is `plugin` and the policy check passes
+      `plugin/` in v0.1.2. A submission's path can't be edited, so the root one was withdrawn and a
+      new one made with path `plugin` (2026-11-14). v0.1.2 got a credential hold (jq `env.PWD`
+      plus an example `curl`, read together); v0.1.3 removes both. Done when the policy check
+      on v0.1.3 passes with no hold
 - [ ] Listings: claudepluginhub, awesome-claude-code from 2026-11-14 (14-day rule). Drafts in `docs/launch.md`
 - [ ] Launch post when the directory listing goes live (changed 2026-11-14 from "11-14 or the
       listing, whichever is first", after v0.1.1 was refused). Eval table, recording optional (decided 2026-11-05): Show HN, r/ClaudeAI, X, Arabic dev
