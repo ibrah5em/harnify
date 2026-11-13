@@ -1,6 +1,6 @@
 {
   "name": "harnify",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Set up a project's .claude/ from an idea: AGENTS.md, picked skills, agents and rules, and docs/agent/ that sessions keep current",
   "author": { "name": "Ibrahem Hasaki", "url": "https://ibrah5em.me" },
   "license": "MIT"

@@ -79,8 +79,8 @@ Use only the lines that apply.
 
 - Did: <what changed, one or two lines>
 - Closed:
-  - short-links: short links survive a restart. Done when: … Proof: `curl -sI
-    localhost:8787/abc1234` after a restart → `301`
+  - short-links: short links survive a restart. Done when: … Proof: `pnpm test
+    restart` passes, it restarts the server and resolves `abc1234`
 - Decided: <a call and its reason, or "assumed X, because Y">
 - Found: <what wasn't written down, or what a doc had wrong>
 - Commits: a1b2c3d, d4e5f6a

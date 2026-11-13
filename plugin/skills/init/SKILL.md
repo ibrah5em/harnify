@@ -108,7 +108,7 @@ commands and layout out until the session that writes them.
 Run each and fix what fails:
 
 - `jq empty .claude/settings.json` (and `.mcp.json` if written) exits 0.
-- `claude plugin list --json | jq -r '.[] | select(.enabled and (.projectPath == null or .projectPath == env.PWD)) | .id' | sort -u`
+- `claude plugin list --json | jq -r --arg p "$(pwd)" '.[] | select(.enabled and (.projectPath == null or .projectPath == $p)) | .id' | sort -u`
   prints exactly the plugins picked. Don't filter on `.scope=="project"`: that lists every
   project's installs, and enabling an already-installed plugin only writes `settings.json`.
 - `wc -l AGENTS.md .claude/CLAUDE.md` is under ~60 combined. Existing mode: the cap covers
