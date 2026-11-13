@@ -7,7 +7,8 @@ each draft gets rewritten before it goes out.
 
 claude.ai/directory/manage → Submit new → Plugin bundle.
 
-- Repository `ibrah5em/harnify`, path empty (plugin.json is at the root), branch `main`
+- Repository `ibrah5em/harnify`, path `plugin`, branch `main`. The path was empty until v0.1.1;
+  policy refused that version for shipping `tests/*.sh`, so the plugin moved to `plugin/`
 - Listing details are read from `plugin.json` and the README, nothing to type
 - Data handling: no personal data read or stored, nothing sent to other services, no
   retention, not aimed at under-18s. harnify only writes files in the open project
@@ -87,6 +88,6 @@ harnify إضافة لـ Claude Code تسألك ٥–٨ أسئلة عن المش�
 الهندية، والخطوط. تضيفها تلقائياً حين يحتاجها المشروع.
 
 جربتها على tinydb: جودة الكود نفسها مع `/init` وحده، والقواعد التي حددتها في المقابلة
-احترمتها كل الجلسات (١٢ من ١٢ مقابل ٠ من ١٢)، بتكلفة أعلى بنحو ٣٥٪.
+احترمتها كل الجلسات (١٢ من ١٢ مقابل ٠ من ١٢)، بتكلفة أعلى بنحو ٣٤٪.
 
 https://github.com/ibrah5em/harnify

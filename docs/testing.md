@@ -17,7 +17,7 @@ By hand:
 d=$(mktemp -d) && cd $d && git init -q -b main
 { jq -S .enabledPlugins ~/.claude/settings.json 2>/dev/null || echo missing; } > ../g-before
 claude -p "/harnify:init <idea>. I'm not at the keyboard: take your recommended option for
-every question and keep going to the end." --plugin-dir ~/projects/harnify \
+every question and keep going to the end." --plugin-dir ~/projects/harnify/plugin \
   --permission-mode bypassPermissions --output-format stream-json --verbose \
   --max-budget-usd 2 > ../trace.jsonl
 ```
@@ -43,7 +43,7 @@ Pass when all hold:
 `evals/` holds only what `plugin eval` can grade: the should-not-fire case.
 
 ```sh
-claude plugin eval . --ablation none --no-publish --allow-tools Bash Write Edit \
+claude plugin eval plugin --ablation none --no-publish --allow-tools Bash Write Edit \
   --disallow-tools AskUserQuestion --max-cost-usd 2
 ```
 

@@ -24,7 +24,7 @@ Or load it for one session without installing:
 
 ```sh
 git clone https://github.com/ibrah5em/harnify ~/harnify
-claude --plugin-dir ~/harnify
+claude --plugin-dir ~/harnify/plugin
 ```
 
 ## Use

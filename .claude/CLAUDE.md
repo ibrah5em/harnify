@@ -10,14 +10,18 @@ existing repo, CLAUDE.md is left to `/init`; harnify adds only its layer.
 
 ## Layout
 
-- `skills/init/SKILL.md`: the flow, run as `/harnify:init [idea]`
-- `skills/init/interview.md`, `toolbox.md`, `templates.md`: the pieces it follows
-- `library/`: Ibrahem's rules and skills, copied into projects (`working-style.md`,
-  `rtl-arabic-web`, `web-a11y`)
-- `.claude-plugin/plugin.json`
+The plugin is `plugin/`, the folder submitted to the directory. It holds only md, JSON and the
+icon: the directory refuses scripts from unverified orgs (2026-11-14), so `tests/` and `docs/`
+stay outside it. `plugin/README.md` and `plugin/LICENSE` are copies of the root ones.
 
-Load it for one session with `claude --plugin-dir ~/projects/harnify`. Check it with
-`claude plugin validate .`.
+- `plugin/skills/init/SKILL.md`: the flow, run as `/harnify:init [idea]`
+- `plugin/skills/init/interview.md`, `toolbox.md`, `templates.md`: the pieces it follows
+- `plugin/library/`: Ibrahem's rules and skills, copied into projects (`working-style.md`,
+  `rtl-arabic-web`, `web-a11y`)
+- `plugin/.claude-plugin/plugin.json`; the marketplace is `.claude-plugin/marketplace.json`
+
+Load it for one session with `claude --plugin-dir ~/projects/harnify/plugin`. Check it with
+`claude plugin validate plugin --profile directory`.
 
 ## How we work here
 
@@ -25,13 +29,13 @@ Load it for one session with `claude --plugin-dir ~/projects/harnify`. Check it 
 - Markdown and JSON config only in what the tool installs or runs: no `.py`, `.sh`, hooks or
   installed code. A helper script, if one is ever needed, lives outside the skill and is never
   copied into a project.
-- Budget: about 500 lines of harnify's own md (`wc -l skills/init/*.md library/rules/*.md`),
+- Budget: about 500 lines of harnify's own md (`wc -l plugin/skills/init/*.md plugin/library/rules/*.md`),
   library skills not counted. Anything past that needs a reason Ibrahem agrees to.
 - Commit and push only when Ibrahem asks. The remote is `origin`, public on GitHub.
 
 ## Why it's small
 
-vold (`~/projects/Archive/Projects/Claude-init`, public and archived as `ibrah5em/vold`) grew to ~1,300 lines of md
+vold (`~/projects/Archive/old-projects/Claude-init`, public and archived as `ibrah5em/vold`) grew to ~1,300 lines of md
 plus ~1,400 lines of hooks and scripts installed into every project. Each piece of code forced
 the next one: installed hooks needed hash-tracked upgrades, a generated `state.md` needed a
 generator and a checker, outside skills needed a quarantine agent. None of it improved what the
@@ -62,6 +66,9 @@ works, archive vold with a pointer here.
   sessions and other contributors never load the global CLAUDE.md.
 - Release order (2026-11-05): installable, then evals with a with/without baseline, then a
   public repo and launch. Plan in `docs/release.md`.
+- Frozen after the launch (2026-11-07), which waits for the directory listing (2026-11-14): no new work unless a real user asks,
+  such as an issue, and that includes making it cheaper. The repo stays public because its
+  results back Ibrahem's job search. Why: `~/projects/career/docs/decisions/target.md`.
 - Name: harnify. Rejected: loom (Atlassian's product), agentify (two projects in this space),
   repoify (reads as "create a repo").
 - Costs of md only, accepted: rules are advice except deny entries; `docs/agent/` can drift
@@ -78,7 +85,7 @@ works, archive vold with a pointer here.
   for the list because models overwrite md lists more. harnify's answer is the plan.md editing
   rules in the AGENTS.md template.
 - Closest tools (super-bootstrap, agent-project-bootstrap) grew hooks the way vold did. vold's
-  survey: `~/projects/Archive/Projects/Claude-init/docs/agent/notes/landscape.md`.
+  survey: `~/projects/Archive/old-projects/Claude-init/docs/agent/notes/landscape.md`.
 
 ## Open
 

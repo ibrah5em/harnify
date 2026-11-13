@@ -5,7 +5,7 @@
 # Runs are sequential: global state is shared, so a parallel run would blame the wrong one.
 set -euo pipefail
 here=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
-plugin=$(cd "$here/../.." && pwd)
+plugin=$(cd "$here/../../plugin" && pwd)
 runs=${1:-3}; modes=${2:-new existing}
 out=$here/results/$(date +%Y%m%dT%H%M%S); mkdir -p "$out"
 budget=${BUDGET_PER_RUN:-2}

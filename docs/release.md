@@ -39,8 +39,12 @@ ablation doesn't measure harnify. See `docs/testing.md`.
 - [x] Public `ibrah5em/harnify`, push, `claude plugin tag` (harnify--v0.1.0, 2026-11-05)
 - [x] Fix release `harnify--v0.1.1` (2026-11-07): v0.1.0 predates the MCP snapshot fix `c55c7fd`
 - [x] `validate --profile directory` clean, submit to the plugin directory (submitted 2026-11-05, held for review: credential-read and download-and-run findings, both docs or unrelated)
+- [ ] Directory, take 2: v0.1.1 refused by policy (`LOCAL_CODE_FILE_TYPE`, unverified orgs can't
+      ship scripts; the repo root was the plugin, so `tests/*.sh` shipped). Plugin moved to
+      `plugin/` in v0.1.2. Done when the submission's path is `plugin` and the policy check passes
 - [ ] Listings: claudepluginhub, awesome-claude-code from 2026-11-14 (14-day rule). Drafts in `docs/launch.md`
-- [ ] Launch post on 2026-11-14 or when the directory listing goes live, whichever is first. Eval table, recording optional (decided 2026-11-05): Show HN, r/ClaudeAI, X, Arabic dev
+- [ ] Launch post when the directory listing goes live (changed 2026-11-14 from "11-14 or the
+      listing, whichever is first", after v0.1.1 was refused). Eval table, recording optional (decided 2026-11-05): Show HN, r/ClaudeAI, X, Arabic dev
       communities (the RTL skill)
 - [x] Archive vold with a pointer here (public, archived 2026-11-05)
 
